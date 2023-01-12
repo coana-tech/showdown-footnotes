@@ -6,6 +6,7 @@
   "version": "2.1.1",
   "main": "dist/index.js",
   "dependencies": {
+    "browserify": "^17.0.0",
     "showdown": "^1.4.1"
   },
   "devDependencies": {
@@ -18,7 +19,8 @@
     "test": "ava",
     "watch-test": "watch 'npm run test'",
     "build": "babel --presets babel-preset-es2015 src --out-dir dist",
-    "watch-build": "watch 'npm run build -- --source-maps inline -w' src"
+    "watch-build": "watch 'npm run build -- --source-maps inline -w' src",
+    "browserify": "browserify src/index.js -o dist/bundle.js"
   },
   "author": "Kriegslustig <npm@ls7.ch>"
 }
